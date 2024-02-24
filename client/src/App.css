@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.contacts {
+    scrollbar-width: none;
+}
+
+.messages {
+    position: relative;
+}
+
+.register {
+    background-image: url('../public/bg-pc.webp');
+    /* background-size: cover; */
+    background-repeat: repeat;
+}
+
+.auth {
+    background-image: url('../public/img.jpg');
+    
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messages::before {
+    background-image: url('../public/bg-pc.webp');
+     content: '';
+    position: absolute;
+    width: 100%;
+    opacity: .2;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+   z-index: -9999;
+}
+
+
+
+.container {
+position: absolute;
+background: #000;
+border-radius : 123px 0px 190px 13px;
+width : 10px;
+height :20px;
+}
+
+.blob {
+    z-index: -9999
+}
+
+.dash {
+    position:absolute;
+    content: "";
+    display: block;
+    background: #000;
+    width: 50%;
+    top: 36.5px;
+    height: 3px;
+    border-radius: 15px;
+    left: 0;
+}
