@@ -13,15 +13,15 @@ const TypingCompo = ({id, profiles, selectedChat}) => {
     .catch((err) => console.log(err))
   }
   return (
-    <div className="flex font-pops justify-center py-2 bg-slate-200">
-      <div className="relative flex gap-2 items-center">
+    
+      <div className="relative flex  gap-2 items-center">
         <form onSubmit={(e) => handleMessageSubmission(e)}>
           <input
             type="text"
             placeholder="Type message"
             onChange={(e) => setMessage(e.target.value)}
             value={message}
-            className="outline-none  px-10 line-none py-2 lg:w-[500px] rounded-xl bg-white"
+            className="outline-none w-full border-2 px-5 line-none py-2 lg:w-[500px] rounded-xl bg-white"
           />
         </form>
         <div className="absolute top-2 text-blue-400 left-3">
@@ -32,7 +32,7 @@ const TypingCompo = ({id, profiles, selectedChat}) => {
         </div>
         <p className="px-4 bg-blue-400 text-white py-2 rounded-2xl">Send</p>
       </div>
-    </div>
+    
   );
 }
 

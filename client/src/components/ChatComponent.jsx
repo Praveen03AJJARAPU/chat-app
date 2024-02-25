@@ -3,7 +3,7 @@ import DpComponent from "./DpComponent";
 import Messages from "./Messages";
 import TypingCompo from "./TypingCompo";
 
-const ChatComponent = ({setProfileWidth, id, profiles, selectedChat }) => {
+const ChatComponent = ({setProfileWidth, name, dp, id, profiles, profileWidth, selectedChat }) => {
   const [receiverID, setReceiverID] = useState('');
   useEffect(() => {
     if (profiles[selectedChat]) {
@@ -14,13 +14,24 @@ const ChatComponent = ({setProfileWidth, id, profiles, selectedChat }) => {
      console.log(receiverID)
   },[profiles,selectedChat])
   return (
-    <div className=" pt1 flex-1 border-t-4 border-blue-400 h-[100vh] lg:h-[90vh] relative">
+    <div
+      className={`${
+        profileWidth !== "0%" ? "blur-sm hidden lg:block" : "block"
+      } w-full  h-[100vh] lg:h-[90vh] `}
+    >
       <DpComponent
         setProfileWidth={setProfileWidth}
         profiles={profiles}
         selectedChat={selectedChat}
+        />
+      <Messages
+        id={id}
+        selectedChat={selectedChat}
+        profiles={profiles}
+        name={name}
+        receiverID={receiverID}
+        dp={dp}
       />
-      <Messages id={id} receiverID={receiverID} />
       <TypingCompo id={id} profiles={profiles} selectedChat={selectedChat} />
     </div>
   );

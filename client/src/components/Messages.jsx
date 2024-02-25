@@ -4,7 +4,7 @@ import Message from './Message'
 import axios from 'axios';
 import io from 'socket.io-client'
 // const socket = io('http://localhost:8000');
-const Messages = ({ id, receiverID }) => {
+const Messages = ({ id, receiverID, dp, name, profiles, selectedChat }) => {
   // const [ chats, setChats ] = useState([]);
   
   useEffect(() => {
@@ -19,8 +19,13 @@ const Messages = ({ id, receiverID }) => {
     // console.log(chats)
   }, [id, receiverID]);
   return (
-    <div className="h-[80%] messages ">
-      <Message />
+    <div className="h-[83%] bg-slate-100 lg:h-[80%] messages ">
+      <Message
+        dp={dp}
+        name={name}
+        profiles={profiles}
+        selectedChat={selectedChat}
+      />
     </div>
   );
 };

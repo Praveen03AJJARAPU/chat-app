@@ -14,17 +14,17 @@ const Contacts = ({ profiles, setSelectedChat, selectedChat }) => {
               }
               }
               className={`flex ${
-                id === selectedChat ? "bg-slate-100" : ""
-              } px-5 items-end justify-between border-b-[1px] border-b-slate-200  py-3`}
+                id === selectedChat ? "bg-slate-50": ""
+              } px-5 items-start justify-between border-b-[1px] border-b-slate-200  py-3`}
             >
-              <div className="flex items-center gap-3 lg:gap-3">
+              <div className="flex items-start gap-3 lg:gap-3">
                 <img
                   src={`http://localhost:8000/Images/${item.profile}`}
                   className="lg:w-[50px] w-[35px] h-[35px] lg:h-[50px] rounded-full object-cover"
                   alt=""
                 />
                 <div>
-                  <p>{item.name}</p>
+                  <p className="mb-1">{item.name}</p>
                   <p className="text-xs">{item.bio}</p>
                 </div>
               </div>

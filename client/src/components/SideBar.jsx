@@ -14,30 +14,30 @@ const SideBar = ({ userProfile }) => {
   //   setImage(userProfile.photo)
   // },[userProfile])
   return (
-    <div className="lg:h-[90vh] gap-10 px-10 h-[100vh] relative flex flex-col items-center justify-start bg-white">
+    <div className="lg:h-[90vh] border-r-[1px] border-slate-200 gap-10 px-5 h-[100vh] relative flex flex-col items-center justify-start bg-white">
       <div className="mt-10 text-blue-600 text-xl">
         <h2>Chattt</h2>
       </div>
       <div className="flex flex-col justify-center text-black gap-4 ">
-        <div className={`${iconsStyling} mr-3 `}>
+        <div className={`${iconsStyling} lg:mr-3 `}>
         <RiHome2Line size={26}/>
-          <p>Home</p>
+          <p className="lg:block hidden">Home</p>
         </div>
         <div className={`${iconsStyling}`}>
           <BiLogoTelegram size={26} />
-          <p>Messages</p>
+          <p className="lg:block hidden">Messages</p>
         </div>
         <div className={`${iconsStyling}`}>
           <GoHistory size={26} />
-          <p>Moments</p>
+          <p className="lg:block hidden">Moments</p>
         </div>
         <div className={`${iconsStyling}`}>
           <MdGroups size={26} />
-          <p>Groups</p>
+          <p className="lg:block hidden">Friends</p>
         </div>
         <div className={`${iconsStyling}`}>
           <IoMdSettings size={26} />
-          <p>Settings</p>
+          <p className="lg:block hidden">Settings</p>
         </div>
       </div>
     </div>
